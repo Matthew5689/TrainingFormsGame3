@@ -26,19 +26,6 @@ namespace TrainingFormsGame3
                 MessageBox.Show($"Form.KeyPress: '{e.KeyChar}' consumed.");
             }
 
-            //switch (e.KeyChar)
-            //{
-            //    case (char)49:
-            //    case (char)52:
-            //    case (char)55:
-            //        if (checkBox1.Checked)
-            //        {
-            //            MessageBox.Show($"Form.KeyPress: '{e.KeyChar}' consumed.");
-            //        }
-            //        e.Handled = true;
-            //        break;
-            //}
-
             if (rectExist)
             {
                 DrawRect(0, 0, 100, 100);
