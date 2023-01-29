@@ -38,7 +38,12 @@ namespace TrainingFormsGame3
 
             if (e.KeyValue == 87)
             {
-                myRect.inMotion();
+                if(myRect.inMotion)
+                {
+                    myRect.inMotion = false;
+                }
+
+                while(myRect.inMotion);
             }
 
             myRect.DrawRect(myRect.posx + 1, myRect.posy, myRect.sizex, myRect.sizey, this);
