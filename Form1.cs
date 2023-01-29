@@ -16,5 +16,10 @@ namespace TrainingFormsGame3
         {
             InitializeComponent();
         }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
