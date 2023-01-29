@@ -31,12 +31,13 @@ namespace TrainingFormsGame3
         public int posy { get; set; }
         public int sizex { get; set; }
         public int sizey { get; set; }
+        public bool inMotion { get; set; }
 
-        public void DrawRect(int posx, int posy, int xsize, int ysize, Form1 form)
+        public void DrawRect(int _posx, int _posy, int _xsize, int _ysize, Form1 _form)
         {
-            
-
             var myBrush = new SolidBrush(Color.Red);
+
+            this.posx = _posx;
 
             // Brush is used to set the color of the Filled Rectangle Color
             //if (rectExist)
@@ -55,8 +56,8 @@ namespace TrainingFormsGame3
             // If we its possible to remove the this statement as we are still in 
             // context of this Form (This Form being referenced as Form1)
             Graphics formGraphics;
-            formGraphics = CreateGraphics();
-            formGraphics.FillRectangle(myBrush, posx, posy, xsize, ysize);
+            formGraphics = _form.CreateGraphics();
+            formGraphics.FillRectangle(myBrush, _posx, _posy, _xsize, _ysize);
             myBrush.Dispose();
             formGraphics.Dispose();
 
